@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exrcise2</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<script>
+	function tambah(val1, val2){
+		var hasil;
+		hasil=parseInt(val1)+parseInt(val2);
+		document.getElementById("hasil").innerHTML=hasil;
+		console.log(hasil);
+	}
+	function kurang(val1, val2){
+		var hasil;
+		hasil=parseInt(val1)-parseInt(val2);
+		document.getElementById("hasil").innerHTML=hasil;
+		console.log(hasil);
+	}
+	function kali(val1, val2){
+		var hasil;
+		hasil=parseInt(val1)*parseInt(val2);
+		document.getElementById("hasil").innerHTML=hasil;
+		console.log(hasil);
+	}
+	function bagi(val1, val2){
+		var hasil;
+		hasil=parseInt(val1) / parseInt(val2);
+		document.getElementById("hasil").innerHTML=hasil;
+		console.log(hasil);
+		}
+		
+	
+	function reset(val1, val2){
+		var hasil;
+		hasil="";
+		document.getElementById("hasil").reset();
+		document.getElementById("hasil").innerHTML=hasil;
+		console.log(hasil);
+	}
+
+</script>
+<body>
+	<h1>KALKULATOR</h1>
+	<table class="table table-bordered table-dark">
+  <thead>
+  	<form>
+    <tr>
+      <th scope="col">
+	<div class='name'>
+		<label>Bilangan Pertama</label>
+		<br><input type="text" id="bilangan1" placeholder="Masukan Bilangan1"/>
+		<br>
+		<label>Bilangan Kedua</label>
+		<br><input type="text" id="bilangan2" placeholder="Masukan Bilangan2"/>
+		<br>
+		<h2>"Hasil"</h2>
+		<h2 id="hasil"></h2>
+		<br>
+		<button type="button" class="btn btn-primary"onclick="tambah(bilangan1.value, bilangan2.value)" >Tambah [+]</button>
+		<button type="button" class="btn btn-danger" onclick="kurang(bilangan1.value, bilangan2.value)">Kurang [-]</button>
+		<button type="button" class="btn btn-warning"onclick="kali(bilangan1.value, bilangan2.value)">Kali [X]</button>
+		<button type="button" class="btn btn-success"onclick="bagi(bilangan1.value, bilangan2.value)">Bagi [:]</button>
+		<br>
+	</div>
+</th>
+</tr>
+<tr>
+<th scope="col">OPSI<br>
+<button type="button" class="btn btn-light"onclick="reset(bilangan1.value, bilangan2.value)" >Reset [#]</button>
+</th>
+</tr>
+</thead>
+</table>
+</form>
+
+
+</body>
+</html>
